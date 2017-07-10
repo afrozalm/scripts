@@ -11,6 +11,9 @@ boundary = []
 
 image = Image.open(filename)
 im_width, im_height = image.size
+if im_width == 64 and im_height == 64:
+    print 'A 64x64 image; not annotating'
+    exit(0)
 ratio = min(1000.0 / im_height, 1000.0 / im_width, 1)
 image = image.resize((int(im_width * ratio),
                       int(im_height * ratio)))
