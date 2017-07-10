@@ -5,7 +5,8 @@ import os
 
 filename = sys.argv[1]
 file = filename.split('/')[-1]
-window = tk.Tk(className=file.split('.')[0])
+file = file.split('.')[0]
+window = tk.Tk(className=file)
 boundary = []
 
 image = Image.open(filename)
@@ -61,10 +62,8 @@ def callback(event):
 
 canvas.bind("<Button-1>", callback)
 tk.mainloop()
-print os.path.abspath(filename)
-for pt in boundary:
-    print pt[0], ',', pt[1]
-# cropped_img = image.crop(boundary[0] + boundary[1])
-# cropped_name = sys.argv[2] + file
-# print 'saving as', cropped_name
-# cropped_img.save(cropped_name)
+with open('../annotation/' + file + '.txt', 'wb') as f:
+    f.write(os.path.abspath(filename))
+    for pt in boundary:
+        f.write('\n')
+        f.write(str(pt[0]) + ' , ' + str(pt[1]))
