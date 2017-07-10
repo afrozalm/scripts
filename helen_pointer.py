@@ -61,6 +61,7 @@ def callback(event):
 
 canvas.bind("<Button-1>", callback)
 tk.mainloop()
+print os.path.abspath(filename)
 for pt in boundary:
     print pt[0], ',', pt[1]
 # cropped_img = image.crop(boundary[0] + boundary[1])
