@@ -46,7 +46,7 @@ def callback(event):
     elif pts in xrange(101, 115):
         print 'click for lips inner lower(101, 115)', pts
     elif pts in xrange(115, 126):
-        print 'click for right eye upper(101, 126)', pts
+        print 'click for right eye upper(115, 126)', pts
     elif pts in xrange(126, 135):
         print 'click for right eye lower(126, 135)', pts
     elif pts in xrange(135, 146):
