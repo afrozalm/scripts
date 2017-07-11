@@ -45,22 +45,22 @@ def callback(event):
         print 'click for lips inner upper(86, 100)', 100 - pts, 'points left'
     elif pts in xrange(100, 114):
         print 'click for lips inner lower(100, 114)', 114 - pts, 'points left'
-    elif pts in xrange(114, 125):
-        print 'click for right eye upper(114, 125)', 125 - pts, 'points left'
-    elif pts in xrange(125, 134):
-        print 'click for right eye lower(125, 134)', 134 - pts, 'points left'
-    elif pts in xrange(134, 145):
-        print 'click for left eye upper(134, 145)', 145 - pts, 'points left'
-    elif pts in xrange(145, 154):
-        print 'click for left eye lower(145, 154)', 154 - pts, 'points left'
-    elif pts in xrange(154, 165):
-        print 'click for right eyebrow upper(154, 165)', 165 - pts, 'pts left'
-    elif pts in xrange(165, 174):
-        print 'click for right eyebrow lower(165, 174)', 174 - pts, 'pts left'
-    elif pts in xrange(174, 185):
-        print 'click for left eyebrow upper(174, 185)', 185 - pts, 'pts left'
-    elif pts in xrange(185, 194):
-        print 'click for left eyebrow lower(185, 194)', 194 - pts, 'pts left'
+    elif pts in xrange(114, 124):
+        print 'click for right eye upper(114, 124)', 124 - pts, 'points left'
+    elif pts in xrange(124, 134):
+        print 'click for right eye lower(124, 134)', 134 - pts, 'points left'
+    elif pts in xrange(134, 144):
+        print 'click for left eye upper(134, 144)', 144 - pts, 'points left'
+    elif pts in xrange(144, 154):
+        print 'click for left eye lower(144, 154)', 154 - pts, 'points left'
+    elif pts in xrange(154, 164):
+        print 'click for right eyebrow upper(154, 164)', 164 - pts, 'pts left'
+    elif pts in xrange(164, 174):
+        print 'click for right eyebrow lower(164, 174)', 174 - pts, 'pts left'
+    elif pts in xrange(174, 184):
+        print 'click for left eyebrow upper(174, 184)', 184 - pts, 'pts left'
+    elif pts in xrange(184, 194):
+        print 'click for left eyebrow lower(184, 194)', 194 - pts, 'pts left'
 
 
 canvas.bind("<Button-1>", callback)
