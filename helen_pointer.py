@@ -39,14 +39,14 @@ def callback(event):
         print 'click for nose boundary(41, 58)', 58 - pts, 'points left'
     elif pts in xrange(58, 72):
         print 'click for lips outer upper(58, 72)', 72 - pts, 'points left'
-    elif pts in xrange(72, 85):
-        print 'click for lips outer lower(72, 85)', 85 - pts, 'points left'
-    elif pts in xrange(85, 100):
-        print 'click for lips inner upper(85, 100)', 100 - pts, 'points left'
+    elif pts in xrange(72, 86):
+        print 'click for lips outer lower(72, 86)', 86 - pts, 'points left'
+    elif pts in xrange(86, 100):
+        print 'click for lips inner upper(86, 100)', 100 - pts, 'points left'
     elif pts in xrange(100, 114):
-        print 'click for lips inner lower(101, 115)', 114 - pts, 'points left'
+        print 'click for lips inner lower(100, 114)', 114 - pts, 'points left'
     elif pts in xrange(114, 125):
-        print 'click for right eye upper(114, 125)', pts, 125 - 'points left'
+        print 'click for right eye upper(114, 125)', 125 - pts, 'points left'
     elif pts in xrange(125, 134):
         print 'click for right eye lower(125, 134)', 134 - pts, 'points left'
     elif pts in xrange(134, 145):
