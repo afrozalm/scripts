@@ -59,7 +59,7 @@ def remover(x): return ''.join([i for i in x if not i.isdigit()])
 
 def get_label(name):
     if 'Peter_Dinklage' in name:
-        name =  ''.join([i for i in name if not (i == 'l')])
+        name = ''.join([i for i in name if not (i == 'l')])
     name = name.split('/')[-1]
     name = name.rsplit('.', 1)[0]
     return remover(name)
@@ -84,10 +84,11 @@ def convert(filename):
     img_flipped = np.fliplr(img)
     img_flipped_resized = resize(img_flipped)
     img_flipped_clock = resize(rotate(img_flipped, angle=angle, cval=mean))
-    img_flipped_anti_clock = resize(rotate(img_flipped, angle=-angle, cval=mean))
+    img_flipped_anti_clock =\
+        resize(rotate(img_flipped, angle=-angle, cval=mean))
 
     destination_name = DST + filename.split('/')[-1]
-    Image.fromarray(img_flipped_anti_clock).save(destination_name)
+    Image.fromarray(img_resized).save(destination_name)
     label = get_label(filename)
     return [(normalize(img_resized), label),
             (normalize(img_rot_clock), label),
@@ -129,6 +130,7 @@ def flatten(lis):
                 yield x
         else:
             yield item
+
 
 img_paths = []
 for root, dirs, files in os.walk(SRC):
