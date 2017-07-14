@@ -34,33 +34,33 @@ def callback(event):
     if pts == 194:
         window.quit()
     elif pts in xrange(1, 41):
-        print 'click for face boundary(1, 41)', 41 - pts, 'points left'
+        print 'click for face boundary(1, 41)', 41 - pts, pts
     elif pts in xrange(41, 58):
-        print 'click for nose boundary(41, 58)', 58 - pts, 'points left'
+        print 'click for nose boundary(41, 58)', 58 - pts, pts - 41
     elif pts in xrange(58, 72):
-        print 'click for lips outer upper(58, 72)', 72 - pts, 'points left'
+        print 'click for lips outer upper(58, 72)', 72 - pts, pts - 58
     elif pts in xrange(72, 86):
-        print 'click for lips outer lower(72, 86)', 86 - pts, 'points left'
+        print 'click for lips outer lower(72, 86)', 86 - pts, pts - 72
     elif pts in xrange(86, 100):
-        print 'click for lips inner upper(86, 100)', 100 - pts, 'points left'
+        print 'click for lips inner upper(86, 100)', 100 - pts, pts - 86
     elif pts in xrange(100, 114):
-        print 'click for lips inner lower(100, 114)', 114 - pts, 'points left'
+        print 'click for lips inner lower(100, 114)', 114 - pts, pts - 100
     elif pts in xrange(114, 124):
-        print 'click for right eye upper(114, 124)', 124 - pts, 'points left'
+        print 'click for right eye upper(114, 124)', 124 - pts, pts - 114
     elif pts in xrange(124, 134):
-        print 'click for right eye lower(124, 134)', 134 - pts, 'points left'
+        print 'click for right eye lower(124, 134)', 134 - pts, pts - 124
     elif pts in xrange(134, 144):
-        print 'click for left eye upper(134, 144)', 144 - pts, 'points left'
+        print 'click for left eye upper(134, 144)', 144 - pts, pts - 134
     elif pts in xrange(144, 154):
-        print 'click for left eye lower(144, 154)', 154 - pts, 'points left'
+        print 'click for left eye lower(144, 154)', 154 - pts, 144
     elif pts in xrange(154, 164):
-        print 'click for right eyebrow upper(154, 164)', 164 - pts, 'pts left'
+        print 'click for right eyebrow upper(154, 164)', 164 - pts, pts - 154
     elif pts in xrange(164, 174):
-        print 'click for right eyebrow lower(164, 174)', 174 - pts, 'pts left'
+        print 'click for right eyebrow lower(164, 174)', 174 - pts, pts - 164
     elif pts in xrange(174, 184):
-        print 'click for left eyebrow upper(174, 184)', 184 - pts, 'pts left'
+        print 'click for left eyebrow upper(174, 184)', 184 - pts, pts - 174
     elif pts in xrange(184, 194):
-        print 'click for left eyebrow lower(184, 194)', 194 - pts, 'pts left'
+        print 'click for left eyebrow lower(184, 194)', 194 - pts, pts - 184
 
 
 canvas.bind("<Button-1>", callback)
