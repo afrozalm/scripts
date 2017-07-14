@@ -88,14 +88,22 @@ def convert(filename):
         resize(rotate(img_flipped, angle=-angle, cval=mean))
 
     destination_name = DST + filename.split('/')[-1]
-    Image.fromarray(img_resized).save(destination_name)
+    parts = destination_name.split('.')
+    extension = parts[-1]
+    base_name = ''.join(parts[0:-1])
+    Image.fromarray(img_resized).save(base_name + '_1.' + extension)
+    Image.fromarray(img_rot_clock).save(base_name + '_2.' + extension)
+    Image.fromarray(img_rot_anti_clock).save(base_name + '_3.' + extension)
+    Image.fromarray(img_flipped_resized).save(base_name + '_4.' + extension)
+    Image.fromarray(img_flipped_clock).save(base_name + '_5.' + extension)
+    Image.fromarray(img_flipped_anti_clock).save(base_name + '_6.' + extension)
     label = get_label(filename)
     return [(normalize(img_resized), label),
-            (normalize(img_rot_clock), label),
-            (normalize(img_rot_anti_clock), label),
-            (normalize(img_flipped_resized), label),
-            (normalize(img_flipped_clock), label),
-            (normalize(img_flipped_anti_clock), label)]
+            (normalize(img_rot_clock), label + 'clock'),
+            (normalize(img_rot_anti_clock), label + 'anticlock'),
+            (normalize(img_flipped_resized), label + 'flipped'),
+            (normalize(img_flipped_clock), label + 'flipped_clock'),
+            (normalize(img_flipped_anti_clock), label + 'flipped_anticlock')]
 
 
 def resize(t):  # t is a np array
