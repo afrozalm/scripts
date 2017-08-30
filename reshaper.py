@@ -1,5 +1,4 @@
 import numpy as np
-from collections import Iterable
 import pickle
 import os
 from random import sample
