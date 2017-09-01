@@ -85,9 +85,11 @@ for root, dirs, f in os.walk(SRC):
     files += f
 
 for annotation_file in files:
+    if annotation_file.split('.')[-1] != 'txt':
+        continue
     outname = DST + annotation_file.split('.')[0]
     annotation_file = os.path.join(SRC, annotation_file)
-    print annotation_file, outname
+    print 'processing', annotation_file
     with open(annotation_file) as f:
         lines = f.read().splitlines()
 
